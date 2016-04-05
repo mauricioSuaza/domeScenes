@@ -47,16 +47,16 @@ void draw() {
   fig();
   
   //saveHiRes(2);
-  saveFrame("###_polygonWhite");
+  saveFrame("#####_polygonWhite");
   
   
 }
 
 void fig(){
 
-  stroke(0);
+  stroke(255);
    
-  background(255);
+  background(0);
  
  float cl=random(100);
    

@@ -25,6 +25,7 @@ function draw() {
 }
 
 function Creature(x,y){
+  
   this.x=x;
   this.y=y;
   
@@ -131,7 +132,7 @@ function Creature(x,y){
    
    var newscaler = scaler;
    
-   for (var s=4; s>0; s--){
+   for (var s=8; s>0; s--){
     
      beginShape();
      var mm=m+(2*s);
@@ -160,7 +161,7 @@ function Creature(x,y){
 
 function superformula (m,n1,n2,n3,num){
   
-  var numPoints =360;
+  var numPoints =359;
   var phi = TWO_PI / numPoints
   var points = [];
   

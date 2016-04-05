@@ -26,8 +26,8 @@ color c;
 
 void setup()
 {
-  size(800,800,P2D);
-  //size(1920,1080,P2D);
+  //size(800,800,P2D);
+  size(1920,1080,P2D);
   //background(220);
   background(0);
   nodes = new ArrayList<MovingNode>();
@@ -57,7 +57,7 @@ void draw()
   frameNum++; 
   cont = str(frameNum);
   //println(nodes.size());
-  fill(255, 2); // semi-transparent white
+  fill(0, 2); // semi-transparent white
   rect(0, 0, width, height);
   //background(220);
   addNewNode(random(0,width),random(0,height),random(-dx,dx),random(-dx,dx),nodeCol);
@@ -139,10 +139,10 @@ void draw()
     currentNode.display();
   }
   
-  image(mask, 0, 0);
+  //image(mask, 0, 0);
   
   //saveHiRes(2);
-  //saveFrame("###_nodes");
+  saveFrame("#####_nodes");
   
 }
 

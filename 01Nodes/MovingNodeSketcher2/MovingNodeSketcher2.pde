@@ -26,8 +26,8 @@ color c;
 
 void setup()
 {
-  size(800,800,P2D);
-  //size(1920,1080,P2D);
+  //size(800,800,P2D);
+  size(1920,1080,P2D);
   //background(220);
   background(0);
   nodes = new ArrayList<MovingNode>();
@@ -41,15 +41,15 @@ void setup()
   
   images[1]= loadImage("img2.jpg");
   images[1].resize(width, height);
-  images[2]= loadImage("img3.jpg");
+  images[2]= loadImage("img11.jpg");
   images[2].resize(width, height);
   
   gfx=new ToxiclibsSupport(this);
   
      
-  strokeWeight(1);
+  strokeWeight(0.5);
   
-  nodeCol= images[1];
+  nodeCol= images[2];
 }
 
 void draw()
@@ -64,7 +64,7 @@ void draw()
   if(drawMode)
   {
     if(mousePressed){
-      addNewNode(mouseX,mouseY,random(-dx,dx),random(-dx,dx),images[0]);
+      addNewNode(mouseX,mouseY,random(-dx,dx),random(-dx,dx),nodeCol);
     }
   } else
   {
@@ -106,7 +106,7 @@ void draw()
         
         if(t>1){
         
-        beginShape(POINTS);
+        beginShape(LINES);
         
         int loc=int(p.x)+int(p.y)*width;
         loc=constrain(loc,0,width*height-1);
@@ -138,10 +138,10 @@ void draw()
     currentNode.display();
   }
   
-  image(mask, 0, 0);
+  //image(mask, 0, 0);
   
   //saveHiRes(2);
-  //saveFrame("###_nodes");
+  //saveFrame("######_nodes");
   
 }
 
@@ -232,16 +232,7 @@ class MovingNode
      
     nodeCol.loadPixels();
   
-    int loc=int(x)+int(y)*width;
-    loc=constrain(loc,0,width*height-1);
-    r = red(nodeCol.pixels[loc]);
-    g = green(nodeCol.pixels[loc]);
-    b = blue(nodeCol.pixels[loc]);
-    c=color(r,g,b);
     
-    
-    noStroke();
-    fill(c);
     ellipse(x,y,nodeWidth,nodeHeight);
     //ellipse(x,y,10,10);
   }
