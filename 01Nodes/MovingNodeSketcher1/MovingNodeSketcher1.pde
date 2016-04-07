@@ -36,7 +36,7 @@ void setup()
    mask.resize(width, height);
    cont="0";
    
-  images[0]= loadImage("img8.jpg");
+  images[0]= loadImage("img4.jpg");
   images[0].resize(width, height);
   
   images[1]= loadImage("img2.jpg");
@@ -58,7 +58,7 @@ void draw()
   cont = str(frameNum);
   //println(nodes.size());
   fill(0, 2); // semi-transparent white
-  rect(0, 0, width, height);
+  //rect(0, 0, width, height);
   //background(220);
   addNewNode(random(0,width),random(0,height),random(-dx,dx),random(-dx,dx),nodeCol);
   
@@ -107,7 +107,7 @@ void draw()
         
         if(t>1){
         
-        beginShape(LINES);
+        beginShape(POINTS);
         
         int loc=int(p.x)+int(p.y)*width;
         loc=constrain(loc,0,width*height-1);
@@ -142,7 +142,7 @@ void draw()
   //image(mask, 0, 0);
   
   //saveHiRes(2);
-  //saveFrame("#####_nodes");
+  saveFrame("#####_nodes");
   
 }
 

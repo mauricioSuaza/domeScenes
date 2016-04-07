@@ -36,7 +36,7 @@ void setup()
    mask.resize(width, height);
    cont="0";
    
-  images[0]= loadImage("img8.jpg");
+  images[0]= loadImage("img4.jpg");
   images[0].resize(width, height);
   
   images[1]= loadImage("img2.jpg");
@@ -57,9 +57,9 @@ void draw()
   frameNum++; 
   cont = str(frameNum);
   //println(nodes.size());
-  fill(0, 2); // semi-transparent white
-  rect(0, 0, width, height);
-  //background(220);
+  //fill(0, 2); // semi-transparent white
+  //rect(0, 0, width, height);
+  background(250);
   addNewNode(random(0,width),random(0,height),random(-dx,dx),random(-dx,dx),nodeCol);
   
   if(drawMode)
@@ -142,7 +142,7 @@ void draw()
   //image(mask, 0, 0);
   
   //saveHiRes(2);
-  //saveFrame("#####_nodes");
+  saveFrame("#####_nodes");
   
 }
 

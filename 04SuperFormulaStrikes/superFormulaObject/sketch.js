@@ -6,21 +6,27 @@ var c0;
 
 function setup() {
   
- createCanvas(windowWidth, windowHeight);
+ createCanvas(1920,1080);
  noFill();
- stroke(255,122);
+ stroke(0);
  
  c0 = new Creature (windowWidth/2, windowHeight/2);
   c1 = new Creature (windowWidth/2, windowHeight/4);
+  
+  saveFrames('myCanvas','.jpg',1200,90);
 }
 
 function draw() {
   
-  background(0);
+  background(255);
  
   //c0.update();
   c0.display();
   //c1.display();
+  
+  
+  
+  
   
 }
 
